@@ -15,11 +15,6 @@ impl super::EventHandler {
 			return Ok(());
 		}
 
-		// Check for h thread
-		if message.channel_id == state.config.h_channel {
-			return Self::send_h(ctx, state).await;
-		}
-
 		// Check for prompt
 		if let Some(response) = crate::PROMPTS.get(&message.content) {
 			message
@@ -31,6 +26,11 @@ impl super::EventHandler {
 		// Only react to 25% of messages
 		if !(rand::random::<bool>() && rand::random::<bool>()) {
 			return Ok(());
+		}
+
+		// Check for h thread
+		if message.channel_id == state.config.h_channel {
+			return Self::send_h(ctx, state).await;
 		}
 
 		// Check if we need to react
