@@ -112,11 +112,11 @@ impl State {
 	pub async fn joeback(&self, http: impl AsRef<Http>) -> Result<()> {
 		self.config
 			.joeback_channel
-			.say(http.as_ref(), "we are so joeback")
+			.say(http.as_ref(), "we are joe back")
 			.await
 			.context("Failed to announce how joeback we are")?;
 
-		info!("we are so joeback");
+		info!("we are joe back");
 
 		Ok(())
 	}

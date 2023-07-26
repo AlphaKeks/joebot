@@ -20,7 +20,7 @@ pub struct Config {
 	/// The default embed icon URL.
 	pub icon: String,
 
-	/// Joebot will say "we are so joeback" in this channel when going online.
+	/// Joebot will say "we are joe back" in this channel when going online.
 	pub joeback_channel: ChannelId,
 
 	/// h.
