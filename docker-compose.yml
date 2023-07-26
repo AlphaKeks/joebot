@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  joebot:
+    restart: "no"
+    build:
+      context: .
+      dockerfile: Dockerfile

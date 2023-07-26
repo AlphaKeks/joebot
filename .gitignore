@@ -1,0 +1,5 @@
+.direnv/
+config.toml
+config.docker.toml
+**/target/
+**/*.rs.bk

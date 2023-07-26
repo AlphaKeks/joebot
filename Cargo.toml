@@ -1,0 +1,28 @@
+[package]
+name = "joebot"
+version = "1.0.0"
+authors = ["AlphaKeks <alphakeks@dawn.sh>"]
+edition = "2021"
+readme = "./README.md"
+repository = "https://github.com/AlphaKeks/joebot"
+license-file = "./LICENSE"
+publish = false
+
+[dependencies]
+tracing = "0.1.37"
+tracing-subscriber = { version = "0.3.17", features = ["env-filter", "time"] }
+time = { version = "0.3.23", features = ["macros"] }
+
+color-eyre = "0.6.2"
+
+clap = { version = "4.3.19", features = ["derive"] }
+
+tokio = { version = "1.29.1", features = ["full"] }
+poise = "0.5.5"
+
+serde = { version = "1.0.174", features = ["derive"] }
+toml = "0.7.6"
+
+phf = { version = "0.11.2", features = ["macros"] }
+lazy_static = "1.4.0"
+rand = "0.8.5"
